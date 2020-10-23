@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<meta property="og:title" content="大越基裕ワインセミナー　アンケートフォーム" />
+ 
+<meta name="robots" content="noindex">
+
+  <title>大越基裕氏ワインセミナー　アンケートページ</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <div class="head">
+      <div class="title">
+        <div class="logo"><img src="img/seminner_logo.png"></div>
+        <p>Dis-Export Japon主催</p>
+      </div>
+      <p class="sub_title">～セミナー　アンケート～</p>
+    </div>
+
+    <div class="main_colum">
+      <div class="photo">
+        <img src="./img/ohkoshi.jpg">
+      </div>
+  
+      <div class="explain">
+        <p>この度は、大越基裕氏のペアリングzoomセミナーご参加、まことにありがとうございました。<br>
+          恐れ入りますがアンケートにご回答頂けますと幸いです。<br>
+          コロナ禍でセミナーの形が今後もオンライン化せざるを得ない状況も考えつつ、次回以降のより良い開催に向けて皆様のご意見が伺えると非常に嬉しいです！<br>
+        </p>
+      </div>
+    </div>
+
+
+    <div id="form_wrap">
+      <h2>アンケート</h2>
+      <form  method="post" action="http://www.dis-export.com/seminner/php/mail2.php">
+
+        <div class="each_anq">
+          <p class="anq">
+            今回のセミナーはご満足いただけましたか?　
+
+               <input type="radio" name="満足度" value="はい">はい　
+              <input type="radio" name="満足度" value="いいえ">いいえ 
+          </p>
+        </div>
+        
+        <div class="each_input">    
+          <p>よかった点</p>
+          <input type="text" class="text_inp" name="よかった" placeholder="良かった点をお書きください">  
+        </div>
+        <div class="each_input">    
+          <p>悪かった点</p>
+          <input type="text" class="text_inp" name="わるかった" placeholder="悪かった点をお書きください">  
+        </div>
+
+        <div class="each_input each_margin">
+          <p class="hope">今後、こんなセミナーもしくはイベントがあったらいいな、<br>と思うものがございましたらお書きください。</p>
+          <textarea class="text_inp tarea" name="自由記入欄" placeholder="その他自由記入
+"></textarea>
+        </div>
+
+        <hr>
+        <div class="each_input">    
+          <p>店舗名</p>
+          <input type="text" class="text_inp" name="店舗名" placeholder="店舗名　＊必須">  
+        </div>
+
+        <div class="each_input">
+          <p>参加者名</p>
+          <input type="text" class="text_inp" name="参加者名" placeholder="参加者名">  
+        </div>
+
+        <div class="each_input">
+          <p>メールアドレス</p>
+          <input type="text" class="text_inp" name="Email" placeholder="メールアドレス　＊必須">  
+        </div>
+
+        <input type="submit" value="アンケートに答える" class="sending">
+        <p class="remind">※答えるボタンを押すと確認画面が出ますので、再度確認して「解答」ボタンを押してください。<br>
+        </p>
+      </form>
+    </div>
+
+
+
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

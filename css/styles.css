@@ -57,7 +57,7 @@ body {
   margin-top: 30px;
 }
 .schedule table {
-  margin: 0 auto;
+  margin: 0 auto;  
   width: 90%;
 }
 
@@ -108,12 +108,30 @@ body {
 
 
 /* フォーム部分 */
+.each_anq {
+ display: flex;
+ justify-content: center;
+}
+
+.anq {
+  font-size: 13px;
+  font-weight: bold;
+}
+
 .each_input {
   margin-bottom: 10px;
 }
 
 .each_input p {
   margin: 3px 0;
+}
+
+.each_margin {
+  margin-top: 30px;
+}
+
+.anq {
+  display: flex;
 }
 
 .text_inp {
@@ -181,7 +199,7 @@ display: block;
 #room p {
   text-align: center;
   font-weight: bold;
-  margin: 30px;
+  margin: 40px;
   color: #333;
   letter-spacing: 3px;
 }
@@ -194,7 +212,7 @@ display: block;
   line-height: 80px;
   font-size: 24px;
   border-radius: 10px;
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   cursor: pointer;
   user-select: none;
 }
@@ -300,6 +318,11 @@ display: block;
     margin: 0;
     margin-right: 20px;
 
+  }
+
+  .hope {
+    font-size: 14px;
+    text-align: left!important;
   }
 
   .text_inp {

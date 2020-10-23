@@ -73,7 +73,7 @@ $userMail = 1;
 $BccMail = "vin@dis-export.com";
 
 // 管理者宛に送信されるメールのタイトル（件名）
-$subject = "セミナーの申込受領";
+$subject = "セミナー　アンケート解答";
 
 // 送信確認画面の表示(する=1, しない=0)
 $confirmDsp = 1;
@@ -107,7 +107,7 @@ $remail = 1;
 $refrom_name = "ディス・エクスポール　ジャポン";
 
 // 差出人に送信確認メールを送る場合のメールのタイトル（上記で1を設定した場合のみ）
-$re_subject = "Dis-Export主催　大越基裕氏ワインセミナー　申し込み完了";
+$re_subject = "アンケートのご回答ありがとうございます。";
 
 //フォーム側の「名前」箇所のname属性の値　※自動返信メールの「○○様」の表示で使用します。
 //指定しない、または存在しない場合は、○○様と表示されないだけです。あえて無効にしてもOK
@@ -116,18 +116,11 @@ $dsp_name = '店舗名';
 //自動返信メールの冒頭の文言 ※日本語部分のみ変更可
 $remail_text = <<< TEXT
 
-この度は、弊社主催のセミナーに申込ありがとうございます。
-このメールの受領にてお申込み完了となります。
+アンケートにお答え頂きましてまことにありがとうございました。
+今後のセミナーをより良くするために
+ご意見を参考とさせていただきます。
 
-当日、開始前の14時40分頃に、お申込み頂いたメールアドレスに
-zoom用のアクセスURLをお送り致しますので、
-14時40分頃のメールをご確認ください。
-
-尚、当日の14時40分よりも後に申込された方は
-個別にURLをお送り致します。
-ご了承ください。
-
-この度はお申込みありがとうございます。
+また次回のご参加もお待ちしております。
 
 TEXT;
 
@@ -331,15 +324,15 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 <?php echo $errm; ?><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
 </div>
 <?php }else{ ?>
-<h3>お申込み内容　確認画面</h3>
-<p align="center">以下の内容で間違いがなければ、「申し込む」ボタンを押してください。</p>
+<h3>アンケート内容　確認画面</h3>
+<p align="center">以下の内容で間違いがなければ、「解答する」ボタンを押してください。</p>
 <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
 <table class="formTable">
 <?php echo confirmOutput($_POST);//入力内容を表示?>
 </table>
 <p align="center"><input type="hidden" name="mail_set" value="confirm_submit">
 <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']);?>">
-<input type="submit" value="　申し込む　">
+<input type="submit" value="　解答する　">
 <input type="button" value="前画面に戻る" onClick="history.back()"></p>
 </form>
 <?php } ?>
